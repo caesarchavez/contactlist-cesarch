@@ -56,7 +56,9 @@ const pushData = async () => {
                 <span className="input-group-text">Adress</span>
                 <input type="text" className="form-control" placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)} />
             </div>
+            <Link to="/">
             <button type="button" className="btn btn-success" onClick={pushData}>Save</button>
+            </Link>
             <Link to ="/"> Or get back to contacts</Link>
         </div>
     )

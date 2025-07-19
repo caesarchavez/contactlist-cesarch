@@ -62,7 +62,9 @@ const updateContact = async () => {
                 <span className="input-group-text">Address</span>
                 <input type="text" className="form-control" placeholder="Address" value={updatedaddress} onChange={(e) => setUpdatedAddress(e.target.value)} />
             </div>
+            <Link to="/">
             <button type="button" className="btn btn-success" onClick={updateContact}>Save</button>
+            </Link>
             <Link to ="/"> Or get back to contacts</Link>
         </div>
     )

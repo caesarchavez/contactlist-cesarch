@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import myphoto from "/src/assets/img/imgavatar.png"
 import { Link } from "react-router-dom";
+import { DeleteContact } from "./DeleteContact.jsx";
 
 export const ContactList = () => {
   const { store, dispatch } = useGlobalReducer();
   const [contacts, setContacts] = useState([]);
+  const [showModal, setShowModal] = useState(false)
+  const [selectedId, setSelectedId] = useState(null)
   useEffect(() => {
     getData();
   }, []);
@@ -54,7 +57,10 @@ export const ContactList = () => {
               <i className="fa-solid fa-pencil"></i>
             </button>
             </Link>
-            <button type="button" className="btn btn-danger">
+            <button type="button" className="btn btn-danger" onClick={() => {
+              setSelectedId(item.id)
+              setShowModal(true)
+            }}>
               <i className="fa-solid fa-trash"></i>
             </button>
           </div>
@@ -62,6 +68,12 @@ export const ContactList = () => {
           )
         })}
       </div>
+      <DeleteContact 
+  contactId={selectedId}
+  show={showModal}
+  onClose={() => setShowModal(false)}
+  onDeleteSuccess={() => getData()} 
+  />
     </div>
   );
 };
