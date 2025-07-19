@@ -45,11 +45,11 @@ const pushData = async () => {
                 <input type="text" className="form-control" placeholder="Name" value={fullname} onChange={(e) => setFullname(e.target.value)} />
             </div>
             <div className="input-group mb-3">
-                <span className="input-group-text">Phone #</span>
+                <span className="input-group-text">Phone</span>
                 <input type="text" className="form-control" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
             </div>
             <div className="input-group mb-3">
-                <span className="input-group-text">Email @</span>
+                <span className="input-group-text">Email</span>
                 <input type="text" className="form-control" placeholder="Email @" value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className="input-group mb-3">

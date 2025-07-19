@@ -28,7 +28,7 @@ export const ContactList = () => {
   };
 
   return (
-    <div className="container bg-light h-100 vh-100">
+    <div className="container bg-light h-100 w-100">
         <h1>People I know</h1>
         <div className="d-flex justify-content-end">
         <Link to="/ContactCreation">
